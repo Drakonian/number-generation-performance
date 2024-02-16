@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="NoSeries Performance">
+    <body>
+      <group id="body">
+        <trans-unit id="Page 347589357 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number Series Performance Test</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Control 2348602098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number of Iterations</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Control NumberOfIterations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 3009980201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Series Gaps</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NoSeriesGaps - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 3009980201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Series Gaps</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NoSeriesGaps - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 2796941906 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Series No Gaps</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NoSeriesNoGaps - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 2796941906 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Series No Gaps</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NoSeriesNoGaps - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 2034045534 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number Increment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NumberIncrement - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 2034045534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number Increment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NumberIncrement - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 366038648 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number Sequence</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NumberSequence - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 366038648 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number Sequence</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NumberSequence - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
