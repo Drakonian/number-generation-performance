@@ -3,6 +3,36 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="NoSeries Performance">
     <body>
       <group id="body">
+        <trans-unit id="Table 4053520353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table NSP Entry Table - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4053520353 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table NSP Entry Table - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4053520353 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table NSP Entry Table - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3650182223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table NSP Entry Table2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3650182223 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table NSP Entry Table2 - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3650182223 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table NSP Entry Table2 - Field Entry No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 347589357 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Number Series Performance Test</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -17,6 +47,26 @@
           <source>Number of Iterations</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Control NumberOfIterations - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 2917795716 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Auto Increment on Insert</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action AutoIncrementOnInsert - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 2917795716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Auto Increment on Insert</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action AutoIncrementOnInsert - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 3724990098 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Init Entry Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action InitEntryTableAction - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 3724990098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Init Entry Table</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action InitEntryTableAction - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 347589357 - Action 3009980201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>No Series Gaps</source>
@@ -47,6 +97,16 @@
           <source>Number Increment</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NumberIncrement - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 2833699545 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Increment with FindLast and Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NumberIncrementWithFindLast - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 2833699545 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Increment with FindLast and Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NumberIncrementWithFindLast - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 347589357 - Action 366038648 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Number Sequence</source>

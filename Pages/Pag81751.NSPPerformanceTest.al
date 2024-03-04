@@ -21,6 +21,8 @@ page 81751 "NSP Performance Test"
                     begin
                         if (NumberOfIterations mod 5) <> 0 then
                             Error('The number must be a multiple of 5.');
+
+                        IsEntryTableReady := false;
                     end;
                 }
             }
@@ -47,7 +49,18 @@ page 81751 "NSP Performance Test"
             {
 
             }
+            actionref(NumberIncrementWithFindLast_promoted; NumberIncrementWithFindLast)
+            {
 
+            }
+            actionref(AutoIncrementOnInsert_promoted; AutoIncrementOnInsert)
+            {
+
+            }
+            actionref(InitEntryTableAction_promoted; InitEntryTableAction)
+            {
+
+            }
         }
         area(Processing)
         {
@@ -95,7 +108,41 @@ page 81751 "NSP Performance Test"
                     TestNumberIncrement();
                 end;
             }
-
+            action(NumberIncrementWithFindLast)
+            {
+                ApplicationArea = All;
+                Caption = 'Increment with FindLast and Filter';
+                ToolTip = 'Increment with FindLast and Filter';
+                Image = ElectronicNumber;
+                trigger OnAction()
+                begin
+                    TestNumberIncrementFindLast();
+                end;
+            }
+            action(AutoIncrementOnInsert)
+            {
+                ApplicationArea = All;
+                Caption = 'Auto Increment on Insert';
+                ToolTip = 'Auto Increment on Insert';
+                Image = ElectronicNumber;
+                trigger OnAction()
+                begin
+                    TestAutoIncrementInsertRecord();
+                    IsEntryTableReady := false;
+                end;
+            }
+            action(InitEntryTableAction)
+            {
+                ApplicationArea = All;
+                Caption = 'Init Entry Table';
+                ToolTip = 'Init Entry Table';
+                Image = Add;
+                trigger OnAction()
+                begin
+                    InitEntryTable();
+                    IsEntryTableReady := true;
+                end;
+            }
         }
     }
     trigger OnOpenPage()
@@ -103,6 +150,27 @@ page 81751 "NSP Performance Test"
         NumberOfIterations := 100000;
 
         CreateNumberSeries();
+    end;
+
+    local procedure InitEntryTable()
+    var
+        EntryTable: Record "NSP Entry Table";
+        EntryTable2: Record "NSP Entry Table2";
+        StartDateTime: DateTime;
+        i: Integer;
+    begin
+        EntryTable.DeleteAll();
+        EntryTable2.DeleteAll();
+        StartDateTime := CurrentDateTime();
+
+        for i := 1 to NumberOfIterations do begin
+            EntryTable.Init();
+            EntryTable."Entry No." := i;
+            EntryTable.Description := 'test';
+            EntryTable.Insert(true);
+        end;
+
+        Message('Tables Initialization: %1 records took %2.', NumberOfIterations, CurrentDateTime() - StartDateTime);
     end;
 
     local procedure TestNoSeriesNoGaps()
@@ -155,6 +223,53 @@ page 81751 "NSP Performance Test"
         Message('Number increment: %1 iterations took %2.', NumberOfIterations, CurrentDateTime() - StartDateTime);
     end;
 
+    local procedure TestAutoIncrementInsertRecord()
+    var
+        EntryTable2: Record "NSP Entry Table2";
+        StartDateTime: DateTime;
+        i: Integer;
+    begin
+        if not IsEntryTableReady then
+            Error('You must Init Entry Table before you go.');
+
+        StartDateTime := CurrentDateTime();
+        for i := 1 to NumberOfIterations do begin
+            EntryTable2.Init();
+            EntryTable2."Entry No." := 0;
+            EntryTable2.Description := 'test';
+            EntryTable2.Insert();
+        end;
+        Message('Auto Increment on Insert: %1 iterations took %2.', NumberOfIterations, CurrentDateTime() - StartDateTime);
+    end;
+
+    local procedure TestNumberIncrementFindLast()
+    var
+        ListOfText: List of [Text];
+        StartDateTime: DateTime;
+        DummyEntryNo: Integer;
+        i: Integer;
+    begin
+        if not IsEntryTableReady then
+            Error('You must Init Entry Table before you go.');
+
+        StartDateTime := CurrentDateTime();
+        for i := 1 to NumberOfIterations do begin
+            DummyEntryNo := SimulateGetNextEntryNo(i - 1);
+            ListOfText.Add(Format(i));
+        end;
+        Message('Number increment: %1 iterations took %2.', NumberOfIterations, CurrentDateTime() - StartDateTime);
+    end;
+
+    local procedure SimulateGetNextEntryNo(CurrentCounter: Integer): Integer
+    var
+        EntryTable: Record "NSP Entry Table";
+    begin
+        EntryTable.SetRange("Entry No.", CurrentCounter);
+        if EntryTable.FindLast() then
+            exit(EntryTable."Entry No." + 1);
+        exit(1);
+    end;
+
     local procedure CreateNumberSeries()
     var
         NoSeries: Record "No. Series";
@@ -202,6 +317,7 @@ page 81751 "NSP Performance Test"
 
     var
         NumberOfIterations: Integer;
+        IsEntryTableReady: Boolean;
         NoSeriesCodeNoGapsLbl: Label 'NSP_NOGAPS', Locked = true;
         NoSeriesCodeGapsLbl: Label 'NSP_GAPS', Locked = true;
         NumberSequenceLbl: Label 'NSP_NumberSequence', Locked = true;
