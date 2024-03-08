@@ -200,7 +200,6 @@ page 81751 "NSP Performance Test"
         StartDateTime: DateTime;
         i: Integer;
         Message: text[250];
-        OnInsertSubscriber: Codeunit "OnInsert Subscriber";
         StartSqlStatements, StartSqlRowsRead : BigInteger;
     begin
         DeleteEntries();
@@ -315,7 +314,6 @@ page 81751 "NSP Performance Test"
         StartDateTime: DateTime;
         i: Integer;
         Message: Text[250];
-        AutoincrementSubscriber: Codeunit "OnInsert Subscriber";
         StartSqlStatements, StartSqlRowsRead : BigInteger;
     begin
         DeleteEntries();
