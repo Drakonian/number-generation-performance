@@ -1,14 +1,13 @@
-table 81752 "NSP Entry Table2"
+table 81753 "NSP Entry Table3"
 {
-    Caption = 'Entry Table2';
+    Caption = 'Entry Table 3';
     DataClassification = CustomerContent;
 
     fields
     {
-        field(1; "Entry No."; Integer)
+        field(1; "Entry No."; Code[20])
         {
             Caption = 'Entry No.';
-            AutoIncrement = true;
         }
         field(2; Description; Text[100])
         {
