@@ -69,22 +69,22 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action InitEntryTableAction - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 347589357 - Action 3009980201 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No Series Gaps</source>
+          <source>Batch No Series Gaps</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NoSeriesGaps - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 347589357 - Action 3009980201 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No Series Gaps</source>
+          <source>Batch No Series Gaps</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NoSeriesGaps - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 347589357 - Action 2796941906 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No Series No Gaps</source>
+          <source>Batch No Series No Gaps</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NoSeriesNoGaps - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 347589357 - Action 2796941906 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No Series No Gaps</source>
+          <source>Batch No Series No Gaps</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NoSeriesNoGaps - Property Caption</note>
         </trans-unit>
@@ -117,6 +117,16 @@
           <source>Number Sequence</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NumberSequence - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 2897841221 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number Sequence Range</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NumberSequenceRange - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 347589357 - Action 2897841221 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number Sequence Range</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page NSP Performance Test - Action NumberSequenceRange - Property Caption</note>
         </trans-unit>
       </group>
     </body>

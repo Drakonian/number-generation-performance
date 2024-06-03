@@ -45,6 +45,10 @@ page 81751 "NSP Performance Test"
             {
 
             }
+            actionref(NumberSequenceRange_promoted; NumberSequenceRange)
+            {
+
+            }
             actionref(NumberIncrement_promoted; NumberIncrement)
             {
 
@@ -67,8 +71,8 @@ page 81751 "NSP Performance Test"
             action(NoSeriesNoGaps)
             {
                 ApplicationArea = All;
-                Caption = 'No Series No Gaps';
-                ToolTip = 'No Series No Gaps';
+                Caption = 'Batch No Series No Gaps';
+                ToolTip = 'Batch No Series No Gaps';
                 Image = NumberGroup;
                 trigger OnAction()
                 begin
@@ -78,8 +82,8 @@ page 81751 "NSP Performance Test"
             action(NoSeriesGaps)
             {
                 ApplicationArea = All;
-                Caption = 'No Series Gaps';
-                ToolTip = 'No Series Gaps';
+                Caption = 'Batch No Series Gaps';
+                ToolTip = 'Batch No Series Gaps';
                 Image = NumberGroup;
                 trigger OnAction()
                 begin
@@ -95,6 +99,17 @@ page 81751 "NSP Performance Test"
                 trigger OnAction()
                 begin
                     TestNumberSequence();
+                end;
+            }
+            action(NumberSequenceRange)
+            {
+                ApplicationArea = All;
+                Caption = 'Number Sequence Range';
+                ToolTip = 'Number Sequence Range';
+                Image = ElectronicNumber;
+                trigger OnAction()
+                begin
+                    TestNumberSequenceRange();
                 end;
             }
             action(NumberIncrement)
@@ -175,28 +190,30 @@ page 81751 "NSP Performance Test"
 
     local procedure TestNoSeriesNoGaps()
     var
-        NoSeriesManagement: Codeunit NoSeriesManagement;
+        NoSeriesBatch: Codeunit "No. Series - Batch";
         ListOfText: List of [Text];
         StartDateTime: DateTime;
         i: Integer;
     begin
         StartDateTime := CurrentDateTime();
         for i := 1 to NumberOfIterations do
-            ListOfText.Add(NoSeriesManagement.GetNextNo(NoSeriesCodeNoGapsLbl, Today(), true));
+            ListOfText.Add(NoSeriesBatch.GetNextNo(NoSeriesCodeNoGapsLbl));
+        NoSeriesBatch.SaveState();
         Message('Number series with no gaps: %1 iterations took %2.', NumberOfIterations, CurrentDateTime() - StartDateTime);
     end;
 
     local procedure TestNoSeriesGaps()
     var
-        NoSeriesManagement: Codeunit NoSeriesManagement;
+        NoSeriesBatch: Codeunit "No. Series - Batch";
         ListOfText: List of [Text];
         StartDateTime: DateTime;
         i: Integer;
     begin
         StartDateTime := CurrentDateTime();
         for i := 1 to NumberOfIterations do
-            ListOfText.Add(NoSeriesManagement.GetNextNo(NoSeriesCodeGapsLbl, Today(), true));
-        Message('Number series with gaps: %1 iterations took %2.', NumberOfIterations, CurrentDateTime() - StartDateTime);
+            ListOfText.Add(NoSeriesBatch.GetNextNo(NoSeriesCodeGapsLbl));
+        NoSeriesBatch.SaveState();
+        Message('Batch Number series with gaps: %1 iterations took %2.', NumberOfIterations, CurrentDateTime() - StartDateTime);
     end;
 
     local procedure TestNumberSequence()
@@ -208,7 +225,21 @@ page 81751 "NSP Performance Test"
         StartDateTime := CurrentDateTime();
         for i := 1 to NumberOfIterations do
             ListOfText.Add(Format(NumberSequence.Next(NumberSequenceLbl)));
-        Message('Number sequence: %1 iterations took %2.', NumberOfIterations, CurrentDateTime() - StartDateTime);
+        Message('Batch Number sequence: %1 iterations took %2.', NumberOfIterations, CurrentDateTime() - StartDateTime);
+    end;
+
+    local procedure TestNumberSequenceRange()
+    var
+        ListOfText: List of [Text];
+        StartDateTime: DateTime;
+        StartNumber: Integer;
+        i: Integer;
+    begin
+        StartDateTime := CurrentDateTime();
+        StartNumber := NumberSequence.Range(NumberSequenceLbl, NumberOfIterations, true);
+        for i := StartNumber to StartNumber + NumberOfIterations do
+            ListOfText.Add(Format(i));
+        Message('Number sequence range: %1 iterations took %2.', NumberOfIterations, CurrentDateTime() - StartDateTime);
     end;
 
     local procedure TestNumberIncrement()
